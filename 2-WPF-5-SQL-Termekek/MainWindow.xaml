@@ -1,0 +1,45 @@
+﻿<Window x:Class="_2_WPF_5_SQL_Termekek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2_WPF_5_SQL_Termekek"
+        mc:Ignorable="d"
+        Title="Termékek" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height ="50"/>
+        </Grid.RowDefinitions>
+        
+        <DataGrid Background="CadetBlue"
+                    Margin="5"
+                    x:Name="dgtermekek"/>
+               
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    Margin="5">
+            <Label Content="Kérem, adja meg a kategóriát:"
+                   FontSize="18"/>
+            <TextBox Width="150"
+                     Height="30"
+                     Margin="5"
+                     Background="CadetBlue"
+                     FontSize="18"
+                     x:Name="txtKategoria"/>
+            
+            <Button Content="Betölt"
+                    FontSize="18"
+                    Width="80"
+                    Height="30"
+                    Margin="5"
+                    x:Name="btnBetolt" Click="btnBetolt_Click"/>
+            <Button Content="Törlés"
+                    FontSize="18"
+                    Width="80"
+                    Height="30"
+                    Margin="5"
+                    x:Name="btnTorles" Click="btnTorles_Click" />
+        </StackPanel> 
+    </Grid>
+</Window>
